@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: bot
+
+server:
+  port: 8079
+
+bot:
+  name: StasintTest1Bot
+  token: 8492288942:AAEC9nn5nQt1Ab8SzsS25nrtilmM7xvO2lc
+
+hazelcast:
+  endpoint: localhost:5701
+  cluster_name: "dev"
+  map_name: "chat-state-map"
