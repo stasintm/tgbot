@@ -34,8 +34,6 @@ public class AbortInputFlowCommand implements Command {
 
     @Override
     public void acceptMessage(String message, ChatState chatState, EntryBot sender) {
-        if (ENTER_SEARCH_STRING.equals(chatState.getCurrentStage())) {
-            Command.enterStage(Stage.AUTH_MAIN_MENU, chatState, sender);
-        }
+        Command.enterStage(Stage.AUTH_MAIN_MENU, chatState, sender);
     }
 }

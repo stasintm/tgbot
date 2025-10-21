@@ -1,10 +1,11 @@
-package ru.alligator.bot.flow.command;
+package ru.alligator.bot.flow.command.search;
 
 import static ru.alligator.bot.flow.command.CommandConstants.SEARCH_COMMAND_NAME;
 import static ru.alligator.bot.flow.command.CommandConstants.SEARCH_COMMAND_TITLE;
 
 import org.springframework.stereotype.Component;
 import ru.alligator.bot.flow.EntryBot;
+import ru.alligator.bot.flow.command.Command;
 import ru.alligator.bot.flow.stage.Stage;
 import ru.alligator.bot.storage.ChatState;
 

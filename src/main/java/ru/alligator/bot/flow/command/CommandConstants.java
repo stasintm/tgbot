@@ -12,4 +12,10 @@ public class CommandConstants {
     public static final String ABORT_COMMAND_TITLE = "\uD83D\uDEAB Вернуться";
     public static final String SEARCH_COMMAND_NAME = "searchColleague";
     public static final String SEARCH_COMMAND_TITLE = "\uD83D\uDD0E Найти коллегу";
+    public static final String REQUEST_VACATION_COMMAND_NAME = "requestVacation";
+    public static final String REQUEST_VACATION_COMMAND_TITLE = "✈️ Оформить отпуск";
+    public static final String CONFIRM_VACATION_COMMAND_NAME = "confirmVacation";
+    public static final String CONFIRM_VACATION_COMMAND_TITLE = "\uD83E\uDD2A Подтвердить";
+    public static final String VIEW_VACATION_COMMAND_NAME = "viewMyVacations";
+    public static final String VIEW_VACATION_COMMAND_TITLE = "\uD83E\uDD39 Мои отпуска";
 }
