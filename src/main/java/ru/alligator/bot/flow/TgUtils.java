@@ -14,11 +14,15 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.alligator.bot.storage.ChatState;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class TgUtils {
+
+    public static final DateTimeFormatter DATE_TIME_FORMATTER =
+        DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     public static void sendMessage(String chatId, String msg, EntryBot sender) {
         var sendMessage = new SendMessage(chatId, msg);

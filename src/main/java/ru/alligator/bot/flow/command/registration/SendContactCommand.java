@@ -1,10 +1,11 @@
-package ru.alligator.bot.flow.command;
+package ru.alligator.bot.flow.command.registration;
 
 import static ru.alligator.bot.flow.command.CommandConstants.SEND_CONTACT_COMMAND_NAME;
 import static ru.alligator.bot.flow.command.CommandConstants.SEND_CONTACT_COMMAND_TITLE;
 
 import org.springframework.stereotype.Component;
 import ru.alligator.bot.flow.EntryBot;
+import ru.alligator.bot.flow.command.Command;
 import ru.alligator.bot.storage.ChatState;
 
 @Component
