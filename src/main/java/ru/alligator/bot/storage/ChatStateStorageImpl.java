@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.alligator.bot.flow.stage.Stage;
 
+import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -60,6 +62,20 @@ public class ChatStateStorageImpl implements ChatStateStorage {
     @Override
     public void putState(ChatState state) {
         hazelcastMap.put(state.getChatId(), objectMapper.writeValueAsString(state));
+    }
+
+    @SneakyThrows
+    @Override
+    public List<ChatState> getByEmployeeId(UUID employeeId) {
+        return hazelcastMap.values().stream()
+                .map(item -> {
+                    try {
+                        return objectMapper.readValue(item, ChatState.class);
+                    } catch (JsonProcessingException e) {
+                        throw new RuntimeException(e);
+                    }
+                }).filter(state -> employeeId.equals(state.getEmployeeId()))
+                .toList();
     }
 }
 

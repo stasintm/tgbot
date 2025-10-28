@@ -1,6 +1,11 @@
 spring:
   application:
     name: bot
+  kafka:
+    bootstrapServers: kafka:9092
+    consumer:
+      group-id: tgbotGroup
+      topic: vacation
 
 server:
   port: 8079

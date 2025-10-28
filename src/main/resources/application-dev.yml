@@ -1,3 +1,7 @@
+spring:
+  kafka:
+    bootstrapServers: localhost:9093
+
 hazelcast:
   endpoint: localhost:5701
 
